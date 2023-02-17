@@ -1,6 +1,6 @@
 # Hello, world!
 #
-# This is an example function named 'hello' 
+# This is an example function named 'hello'
 # which prints 'Hello, world!'.
 #
 # You can learn more about package authoring with RStudio at:
@@ -13,6 +13,19 @@
 #   Check Package:             'Ctrl + Shift + E'
 #   Test Package:              'Ctrl + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
+#' Hello World Example
+#'
+#' @description
+#'
+#' Hello World minimal example how to use inst/extdata/ for examples
+#'
+#' @param file Path to TXT-file.
+#'
+#' @examples
+#'
+#' system.file('extdata', "helloworld.txt", package = "rpackage")
+#'
+#' @export
+hello <- function(file) {
+	print(readline(file))
 }
